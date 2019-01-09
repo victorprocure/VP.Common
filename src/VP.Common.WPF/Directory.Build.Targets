@@ -12,10 +12,10 @@
     </PropertyGroup>
     <!-- Sign assembly -->
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-        <!-- <SignAssembly>True</SignAssembly>
-        <AssemblyOriginatorKeyFile>$(MSBuildProjectDirectory)\..\victorprocure\VP.Common.WPF.public.snk</AssemblyOriginatorKeyFile>
+        <SignAssembly>True</SignAssembly>
+        <AssemblyOriginatorKeyFile>$(MSBuildProjectDirectory)\..\..\VP.Common.WPF.snk</AssemblyOriginatorKeyFile>
         <DelaySign>false</DelaySign>
-        <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign> -->
+        <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
     </PropertyGroup>
     <PropertyGroup>
         <DocumentationFile>$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
