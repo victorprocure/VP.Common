@@ -1,0 +1,13 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/VP.Common.WPF;component/Themes/Spinners/ArcSpinner.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/VP.Common.WPF;component/Themes/Spinners/ArcRingSpinner.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/VP.Common.WPF;component/Themes/Spinners/DoubleBounceSpinner.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/VP.Common.WPF;component/Themes/Spinners/FlipPlaneSpinner.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/VP.Common.WPF;component/Themes/Spinners/PulseSpinner.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/VP.Common.WPF;component/Themes/Spinners/RingSpinner.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/VP.Common.WPF;component/Themes/Spinners/ThreeDotSpinner.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/VP.Common.WPF;component/Themes/Spinners/WaveSpinner.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

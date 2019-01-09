@@ -1,0 +1,24 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <!-- NuGet -->
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <Authors>zeluisping, Victor Procure</Authors>
+        <PackageLicenseUrl>https://raw.githubusercontent.com/victorprocure/VP.Common.WPF/master/README.md</PackageLicenseUrl>
+        <PackageProjectUrl>https://github.com/victorprocure/VP.Common.WPF</PackageProjectUrl>
+        <PackageTags>WPF;UI;Metro;Modern;Material;XAML;Toolkit;Library;.NET;OSS;OpenSource</PackageTags>
+        <PackageReleaseNotes>https://github.com/victorprocure/VP.Common.WPF/releases</PackageReleaseNotes>
+        <RepositoryUrl>https://github.com/victorprocure/VP.Common.WPF.git</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <GenerateLibraryLayout>true</GenerateLibraryLayout>
+    </PropertyGroup>
+    <!-- Sign assembly -->
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <!-- <SignAssembly>True</SignAssembly>
+        <AssemblyOriginatorKeyFile>$(MSBuildProjectDirectory)\..\victorprocure\VP.Common.WPF.public.snk</AssemblyOriginatorKeyFile>
+        <DelaySign>false</DelaySign>
+        <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign> -->
+    </PropertyGroup>
+    <PropertyGroup>
+        <DocumentationFile>$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
+    </PropertyGroup>
+    <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.Targets', '$(MSBuildThisFileDirectory)../'))"/>
+</Project>

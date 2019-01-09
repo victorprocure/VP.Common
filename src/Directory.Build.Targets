@@ -1,0 +1,31 @@
+<Project>
+    <PropertyGroup>
+        <DefineConstants>$(DefineConstants)</DefineConstants>
+    </PropertyGroup>
+
+    <!-- AssemblyInfo -->
+    <PropertyGroup>
+        <Company>Procure Software Development</Company>
+        <Product>VP.Common.WPF</Product>
+        <Copyright>Copyright © 2013 - $([System.DateTime]::Today.ToString(yyyy)) VP.Common.WPF</Copyright>
+        <Description>A collection of common WPF controls and utilities</Description>
+
+        <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+        <Version>1.0.0.0</Version>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <FileVersion>1.0.0.0</FileVersion>
+        <InformationalVersion>1.0.0.0</InformationalVersion>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <Optimize>false</Optimize>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <Optimize>true</Optimize>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Page Update="@(Page)" SubType="Designer" Generator="MSBuild:Compile" />
+    </ItemGroup>
+
+</Project>
