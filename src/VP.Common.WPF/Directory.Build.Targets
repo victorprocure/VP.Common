@@ -2,7 +2,7 @@
     <!-- NuGet -->
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
         <Authors>zeluisping, Victor Procure</Authors>
-        <PackageLicense Type="Expression">Unlicense</PackageLicense>
+        <PackageLicenseUrl>https://github.com/victorprocure/VP.Common.WPF/LICENSE</PackageLicenseUrl>
         <PackageProjectUrl>https://github.com/victorprocure/VP.Common.WPF</PackageProjectUrl>
         <PackageTags>WPF;UI;Metro;Modern;Material;XAML;Toolkit;Library;.NET;OSS;OpenSource</PackageTags>
         <PackageReleaseNotes>https://github.com/victorprocure/VP.Common.WPF/releases</PackageReleaseNotes>
