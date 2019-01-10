@@ -141,7 +141,7 @@ namespace VP.Common.Core
         public static IEnumerable<string> SplitBy(this string value, string delimiter,
             StringSplitOptions options = StringSplitOptions.RemoveEmptyEntries)
         {
-            var splitValues = value.Split(new[] {delimiter}, System.StringSplitOptions.None);
+            var splitValues = value.Split(new[] { delimiter }, System.StringSplitOptions.None);
 
             if (options.HasFlag(StringSplitOptions.TrimWhiteSpaceFromEntries) ||
                 options.HasFlag(StringSplitOptions.TrimWhiteSpaceAndRemoveEmptyEntries))
@@ -178,8 +178,8 @@ namespace VP.Common.Core
 
         public static bool ToBoolean(this string input)
         {
-            var trueValues = new[] {"true", "on", "1"};
-            var falseValues = new[] {"false", "off", "0"};
+            var trueValues = new[] { "true", "on", "1" };
+            var falseValues = new[] { "false", "off", "0" };
 
             if (trueValues.Contains(input.ToLower()))
             {
@@ -222,7 +222,7 @@ namespace VP.Common.Core
             {
                 try
                 {
-                    result = (decimal) double.Parse(s);
+                    result = (decimal)double.Parse(s);
                 }
                 catch (FormatException)
                 {
@@ -259,7 +259,7 @@ namespace VP.Common.Core
                 return 0;
             }
 
-            return (int) Convert.ToDecimal(s);
+            return (int)Convert.ToDecimal(s);
         }
 
         public static string Base64Encode(this string plainText)
