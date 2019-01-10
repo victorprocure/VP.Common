@@ -6,7 +6,7 @@
     <!-- AssemblyInfo -->
     <PropertyGroup>
         <Company>Procure Software Development</Company>
-        <Product>VP.Common.WPF</Product>
+        <Product>VP.Common</Product>
         <Copyright>Copyright © 2013 - $([System.DateTime]::Today.ToString(yyyy)) VP.Common.WPF</Copyright>
         <Description>A collection of common WPF controls and utilities</Description>
 
@@ -17,15 +17,18 @@
         <InformationalVersion>1.0.1</InformationalVersion>
     </PropertyGroup>
 
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <SignAssembly>True</SignAssembly>
+        <AssemblyOriginatorKeyFile>$(MSBuildProjectDirectory)\..\VP.Common.snk</AssemblyOriginatorKeyFile>
+        <DelaySign>false</DelaySign>
+        <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+    </PropertyGroup>
+
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
         <Optimize>false</Optimize>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
         <Optimize>true</Optimize>
     </PropertyGroup>
-
-    <ItemGroup>
-        <Page Update="@(Page)" SubType="Designer" Generator="MSBuild:Compile" />
-    </ItemGroup>
 
 </Project>

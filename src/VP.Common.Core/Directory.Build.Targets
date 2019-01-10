@@ -1,0 +1,22 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<PropertyGroup>
+        <Product>VP.Common.Core</Product>
+        <Description>Common utilities and extensions</Description>
+    </PropertyGroup>
+    <!-- NuGet -->
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <Authors>zeluisping, Victor Procure</Authors>
+        <PackageLicenseUrl>https://github.com/victorprocure/VP.Common/LICENSE</PackageLicenseUrl>
+        <PackageProjectUrl>https://github.com/victorprocure/VP.Common</PackageProjectUrl>
+        <PackageTags>WPF;UI;Metro;Modern;Material;XAML;Toolkit;Library;.NET;OSS;OpenSource</PackageTags>
+        <PackageReleaseNotes>https://github.com/victorprocure/VP.Common/releases</PackageReleaseNotes>
+        <RepositoryUrl>https://github.com/victorprocure/VP.Common.git</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <GenerateLibraryLayout>true</GenerateLibraryLayout>
+    </PropertyGroup>
+    <PropertyGroup>
+        <DocumentationFile>$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
+    </PropertyGroup>
+    
+    <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.Targets', '$(MSBuildThisFileDirectory)../'))"/>
+</Project>

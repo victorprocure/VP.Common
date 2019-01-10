@@ -1,4 +1,4 @@
-framework: net45, net452, net46, net47, netcoreapp3.0
+framework: net45, net452, net46, net47, netcoreapp3.0, netstandard2.0
 
 source https://api.nuget.org/v3/index.json
 
@@ -6,6 +6,7 @@ source https://api.nuget.org/v3/index.json
 nuget JetBrains.Annotations copy_local: true
 nuget Microsoft.SourceLink.GitHub prerelease copy_local: true
 nuget WpfAnalyzers copy_local: true
+nuget System.Reflection.Emit
 
 nuget xunit < 3
 nuget xunit.runner.visualstudio < 3

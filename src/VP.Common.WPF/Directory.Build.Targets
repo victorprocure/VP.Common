@@ -1,4 +1,8 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<PropertyGroup>
+        <Product>VP.Common.WPF</Product>
+        <Description>A collection of common WPF controls and utilities</Description>
+    </PropertyGroup>
     <!-- NuGet -->
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
         <Authors>zeluisping, Victor Procure</Authors>
@@ -10,15 +14,13 @@
         <RepositoryType>git</RepositoryType>
         <GenerateLibraryLayout>true</GenerateLibraryLayout>
     </PropertyGroup>
-    <!-- Sign assembly -->
-    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-        <SignAssembly>True</SignAssembly>
-        <AssemblyOriginatorKeyFile>$(MSBuildProjectDirectory)\..\..\VP.Common.WPF.snk</AssemblyOriginatorKeyFile>
-        <DelaySign>false</DelaySign>
-        <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
-    </PropertyGroup>
     <PropertyGroup>
         <DocumentationFile>$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
     </PropertyGroup>
+
+    <ItemGroup>
+        <Page Update="@(Page)" SubType="Designer" Generator="MSBuild:Compile" />
+    </ItemGroup>
+    
     <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.Targets', '$(MSBuildThisFileDirectory)../'))"/>
 </Project>

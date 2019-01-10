@@ -6,11 +6,34 @@
     <Title>VP.Common.WPF</Title>
     <RootNamespace>VP.Common.WPF</RootNamespace>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <UseWPF>true</UseWPF>
+    <DisableImplicitFrameworkReferences Condition="'$(TargetFramework)' != 'netcoreapp3.0'">true</DisableImplicitFrameworkReferences>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="**\*.png;**\*.jpg;**\*.ico"/>
+    <Resource Include="**\*.png;**\*.jpg;**\*.ico"/>
+  </ItemGroup>
 
   <ItemGroup>
     <Compile DependentUpon="%(Filename)" SubType="Code" Update="**\obj\**\*.g$(DefaultLanguageSourceExtension)" />
     <Compile DependentUpon="%(Filename)" SubType="Designer" Update="**\*.xaml$(DefaultLanguageSourceExtension)" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' != 'netcoreapp3.0'">
+    <Reference Include="PresentationCore"/>
+    <Reference Include="PresentationFramework"/>
+    <Reference Include="System.Xaml"/>
+    <Reference Include="WindowsBase"/>
+    <Reference Include="Microsoft.CSharp"/>
+    <Reference Include="System"/>
+    <Reference Include="System.ComponentModel.DataAnnotations"/>
+    <Reference Include="System.Configuration"/>
+    <Reference Include="System.Core"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VP.Common.Core\VP.Common.Core.csproj" />
   </ItemGroup>
 
   <Target Name="_SdkDesignTimeBuildAndIntelliSenseWorkaround" AfterTargets="_CheckCompileDesignTimePrerequisite">
